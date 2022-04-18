@@ -20,7 +20,7 @@
 #  fk_rails_...  (owner_id => users.id)
 #
 class Photo < ApplicationRecord
-  validates(:owner_id, presence: true)
+  validates :caption, presence: true
   validates(:image, presence: true)
 
 
