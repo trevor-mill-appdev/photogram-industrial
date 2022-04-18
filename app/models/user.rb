@@ -11,4 +11,6 @@ class User < ApplicationRecord
   has_many :follow_requests
 
   has_many :likes, foreign_key: "fan_id"
+
+  scope :by_comments, -> { order(comments_count: :desc) }
 end
