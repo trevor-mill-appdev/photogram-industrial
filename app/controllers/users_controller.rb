@@ -10,4 +10,8 @@ class UsersController < ApplicationController
   def following
     @user = User.find_by!(username: params.fetch(:username))
   end
+
+  def home
+    @user = current_user
+  end
 end
